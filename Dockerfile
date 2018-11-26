@@ -2,7 +2,8 @@ ARG ubuntuVersion
 
 FROM ubuntu:${ubuntuVersion}
 
-LABEL maintainer="lucperkins@gmail.com"
+LABEL maintainer = "lucperkins@gmail.com"
+LABEL org.label-schema.vcs-url = "https://github.com/lucperkins/devbox"
 
 RUN apt-get update
 
