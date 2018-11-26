@@ -14,11 +14,9 @@ build:
 	.
 
 tag:
-	docker tag $(LOCAL) $(IMAGE)
-	docker tag $(LOCAL) $(LATEST)
+	docker tag $(LOCAL) $(IMAGE) && docker tag $(LOCAL) $(LATEST)
 
 push:
-	docker push $(IMAGE)
-	docker push $(LATEST)
+	docker push $(IMAGE) && docker push $(LATEST)
 
 publish: build tag push
